@@ -1,5 +1,5 @@
 
-import { CheckCircle, MessageSquare, FileText, Clock, ArrowRight, Smartphone, Users, TrendingUp } from "lucide-react";
+import { CheckCircle, MessageSquare, FileText, Clock, ArrowRight, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -39,24 +39,6 @@ const Index = () => {
     }
   ];
 
-  const benefits = [
-    {
-      icon: Clock,
-      title: "Save Hours Weekly",
-      description: "Stop wasting time on repetitive WhatsApp messages"
-    },
-    {
-      icon: Users,
-      title: "Better Customer Service", 
-      description: "Instant replies keep your customers happy"
-    },
-    {
-      icon: TrendingUp,
-      title: "Focus on Sales",
-      description: "Spend time growing your business, not answering FAQs"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
@@ -83,7 +65,7 @@ const Index = () => {
             Focus on Sales.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Zorbase helps small D2C brands handle WhatsApp conversations automatically — no coding, no tech setup.
+            We help D2C business owners save time by automating WhatsApp replies and sending campaigns to existing customers.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -100,28 +82,6 @@ const Index = () => {
           <p className="text-sm text-gray-400 max-w-md mx-auto">
             No automation setup needed. Just fill the form and experience the time-saving.
           </p>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Perfect for Small D2C Brands
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 bg-gray-800">
-                <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-600 text-white mb-6">
-                    <benefit.icon className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
