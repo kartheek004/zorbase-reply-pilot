@@ -1,11 +1,15 @@
 
-import { CheckCircle, MessageSquare, FileText, Clock, ArrowRight, Smartphone } from "lucide-react";
+import { CheckCircle, MessageSquare, FileText, Clock, ArrowRight, Smartphone, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   const scrollToSteps = () => {
     document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const openGoogleForm = () => {
+    window.open('https://forms.google.com', '_blank');
   };
 
   const steps = [
@@ -58,23 +62,22 @@ const Index = () => {
       <section className="container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Automate Your WhatsApp.{" "}
+            Automate WhatsApp Replies & Campaigns for Your{" "}
             <span className="text-red-600">
-              Save Time.
-            </span>{" "}
-            Focus on Sales.
+              D2C Brand
+            </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            We help D2C business owners save time by automating WhatsApp replies and sending campaigns to existing customers.
+            Save time by auto-replying to customer FAQs and sending bulk messages — no app, no setup.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
               size="lg" 
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={scrollToSteps}
+              onClick={openGoogleForm}
             >
-              Get Early Access – Fill This Form
+              Fill Form to Begin WhatsApp Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -82,6 +85,31 @@ const Index = () => {
           <p className="text-sm text-gray-400 max-w-md mx-auto">
             No automation setup needed. Just fill the form and experience the time-saving.
           </p>
+        </div>
+      </section>
+
+      {/* Trust Signal Section */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-lg text-gray-300 mb-8">
+            Trusted by early users from Shopify and Instagram stores.
+          </p>
+          
+          <Card className="border-gray-700 shadow-lg bg-gray-800 max-w-2xl mx-auto">
+            <CardContent className="p-8">
+              <div className="flex items-start space-x-4">
+                <Quote className="h-8 w-8 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-xl text-white italic mb-4">
+                    "Saved me 3+ hours every week!"
+                  </p>
+                  <p className="text-gray-400">
+                    — Handmade Store Owner
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -116,6 +144,21 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Manual MVP Disclaimer */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto">
+          <Card className="border-yellow-600 bg-yellow-900/20">
+            <CardContent className="p-6 text-center">
+              <p className="text-yellow-200 text-sm italic">
+                ⚠️ This is a pilot version of Zorbase. 
+                All responses and campaigns are currently handled manually by our team to understand your needs better. 
+                Automation is coming soon.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-3xl mx-auto text-center">
@@ -129,11 +172,27 @@ const Index = () => {
           
           <Button 
             size="lg" 
-            className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 text-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse"
+            className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 text-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse mb-8"
+            onClick={openGoogleForm}
           >
-            Get Early Access – Fill This Form
+            Fill Form to Begin WhatsApp Demo
             <ArrowRight className="ml-3 h-6 w-6" />
           </Button>
+
+          {/* Privacy Notice */}
+          <Card className="border-gray-700 bg-gray-800 max-w-2xl mx-auto">
+            <CardContent className="p-6">
+              <div className="text-sm text-gray-300 space-y-2">
+                <p className="flex items-center justify-center space-x-2">
+                  <span>🔐</span>
+                  <span className="font-semibold">Privacy Notice</span>
+                </p>
+                <p>Your WhatsApp number and FAQ responses will only be used for this test.</p>
+                <p>We will never spam or share your data.</p>
+                <p>By submitting, you agree to receive WhatsApp messages from Zorbase for testing purposes.</p>
+              </div>
+            </CardContent>
+          </Card>
           
           <p className="text-sm text-gray-400 mt-4 max-w-md mx-auto">
             Join small D2C brands who are already saving time with WhatsApp automation
