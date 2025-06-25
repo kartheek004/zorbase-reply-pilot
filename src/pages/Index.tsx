@@ -8,7 +8,7 @@ const Index = () => {
     });
   };
   const openGoogleForm = () => {
-    window.open('https://forms.google.com', '_blank');
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLScI7iSO9qkvk7NZw2ntzYsrmNVD4QvshQ3y_l1fpZLjVGccrg/viewform', '_blank');
   };
   const steps = [{
     number: "01",
