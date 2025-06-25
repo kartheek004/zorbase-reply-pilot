@@ -1,50 +1,41 @@
-
 import { CheckCircle, MessageSquare, FileText, Clock, ArrowRight, Smartphone, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
 const Index = () => {
   const scrollToSteps = () => {
-    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('how-it-works')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
   const openGoogleForm = () => {
     window.open('https://forms.google.com', '_blank');
   };
-
-  const steps = [
-    {
-      number: "01",
-      title: "Fill the Google Form",
-      description: "Share your contact number + FAQs about your product",
-      icon: FileText,
-      color: "bg-red-600"
-    },
-    {
-      number: "02", 
-      title: "We Text You",
-      description: "You'll receive WhatsApp messages based on what customers might ask",
-      icon: MessageSquare,
-      color: "bg-red-600"
-    },
-    {
-      number: "03",
-      title: "Test the Auto-Replies", 
-      description: "Ask your own FAQs — we'll respond manually, mimicking automation",
-      icon: CheckCircle,
-      color: "bg-red-600"
-    },
-    {
-      number: "04",
-      title: "View Your Message Log",
-      description: "Get a simple Google Sheet log of all replies and interactions",
-      icon: Clock,
-      color: "bg-red-600"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
+  const steps = [{
+    number: "01",
+    title: "Fill the Google Form",
+    description: "Share your contact number + FAQs about your product",
+    icon: FileText,
+    color: "bg-red-600"
+  }, {
+    number: "02",
+    title: "We Text You",
+    description: "You'll receive WhatsApp messages based on what customers might ask",
+    icon: MessageSquare,
+    color: "bg-red-600"
+  }, {
+    number: "03",
+    title: "Test the Auto-Replies",
+    description: "Ask your own FAQs — we'll respond manually, mimicking automation",
+    icon: CheckCircle,
+    color: "bg-red-600"
+  }, {
+    number: "04",
+    title: "View Your Message Log",
+    description: "Get a simple Google Sheet log of all replies and interactions",
+    icon: Clock,
+    color: "bg-red-600"
+  }];
+  return <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <header className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
@@ -52,9 +43,7 @@ const Index = () => {
             <Smartphone className="h-8 w-8 text-red-600" />
             <span className="text-2xl font-bold text-white">Zorbase</span>
           </div>
-          <Button variant="outline" className="hidden md:flex border-gray-600 text-white hover:bg-gray-800">
-            Contact Us
-          </Button>
+          
         </div>
       </header>
 
@@ -72,11 +61,7 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={openGoogleForm}
-            >
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300" onClick={openGoogleForm}>
               Fill Form to Begin WhatsApp Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -127,8 +112,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <Card key={index} className="border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group bg-gray-900">
+            {steps.map((step, index) => <Card key={index} className="border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group bg-gray-900">
                 <CardContent className="p-8 text-center relative z-10">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${step.color} text-white mb-6 shadow-lg`}>
                     <step.icon className="h-8 w-8" />
@@ -138,8 +122,7 @@ const Index = () => {
                   <p className="text-gray-300 leading-relaxed">{step.description}</p>
                 </CardContent>
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-red-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -170,11 +153,7 @@ const Index = () => {
             Just experience how automation could transform your business.
           </p>
           
-          <Button 
-            size="lg" 
-            className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 text-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse mb-8"
-            onClick={openGoogleForm}
-          >
+          <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 text-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse mb-8" onClick={openGoogleForm}>
             Fill Form to Begin WhatsApp Demo
             <ArrowRight className="ml-3 h-6 w-6" />
           </Button>
@@ -214,8 +193,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
