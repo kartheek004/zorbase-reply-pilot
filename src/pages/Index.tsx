@@ -85,6 +85,10 @@ const Index = () => {
               <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>
           </div>
+          
+          <p className="text-xs md:text-sm text-gray-400 max-w-md mx-auto px-4 mb-4">
+            No automation setup needed. Just fill the form and experience the time-saving.
+          </p>
 
           {/* Manual MVP Disclaimer - moved here */}
           <div className="mb-8">
@@ -98,10 +102,6 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
-          
-          <p className="text-xs md:text-sm text-gray-400 max-w-md mx-auto px-4">
-            No automation setup needed. Just fill the form and experience the time-saving.
-          </p>
         </div>
       </section>
 
@@ -174,7 +174,7 @@ const Index = () => {
           
           <Button 
             size="lg" 
-            className="bg-red-600 hover:bg-red-700 text-white px-8 md:px-12 py-4 text-lg md:text-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse mb-8 w-full sm:w-auto"
+            className="bg-red-600 hover:bg-red-700 text-white px-8 md:px-12 py-4 text-lg md:text-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 mb-8 w-full sm:w-auto"
             onClick={openGoogleForm}
           >
             Fill Form to Begin WhatsApp Demo
@@ -211,7 +211,7 @@ const Index = () => {
               <span className="text-lg md:text-xl font-bold">Zorbase</span>
             </div>
             <div className="text-xs md:text-sm text-gray-400 text-center">
-              © 2024 Zorbase. Saving time for D2C businesses everywhere.
+              © 2025 Zorbase. Saving time for D2C businesses everywhere.
             </div>
           </div>
         </div>
