@@ -20,43 +20,43 @@ const Index = () => {
       title: "Fill the Google Form",
       description: "Share your contact number + FAQs about your product",
       icon: FileText,
-      color: "bg-red-600"
+      color: "bg-blue-500"
     },
     {
       number: "02", 
       title: "We Text You",
       description: "You'll receive WhatsApp messages based on what customers might ask",
       icon: MessageSquare,
-      color: "bg-red-600"
+      color: "bg-blue-500"
     },
     {
       number: "03",
       title: "Test the Auto-Replies", 
       description: "Ask your own FAQs — we'll respond manually, mimicking automation",
       icon: CheckCircle,
-      color: "bg-red-600"
+      color: "bg-blue-500"
     },
     {
       number: "04",
       title: "View Your Message Log",
       description: "Get a simple Google Sheet log of all replies and interactions", 
       icon: Clock,
-      color: "bg-red-600"
+      color: "bg-blue-500"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-black text-white font-mono">
       {/* Header */}
-      <header className="container mx-auto px-4 py-6">
+      <header className="container mx-auto px-4 py-6 border-b border-gray-800">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Smartphone className="h-6 w-6 md:h-8 md:w-8 text-red-600" />
-            <span className="text-xl md:text-2xl font-bold text-white">Zorbase</span>
+            <Smartphone className="h-6 w-6 md:h-8 md:w-8 text-blue-400" />
+            <span className="text-xl md:text-2xl font-bold text-white tracking-wide">ZORBASE</span>
           </div>
           
           <div className="flex items-center space-x-2 text-white">
-            <Phone className="h-4 w-4 md:h-5 md:w-5 text-red-600" />
+            <Phone className="h-4 w-4 md:h-5 md:w-5 text-blue-400" />
             <span className="text-sm md:text-base font-medium">9100910404</span>
           </div>
         </div>
@@ -65,20 +65,20 @@ const Index = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-12 md:py-20 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight px-2">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight px-2 tracking-tight">
             Automate WhatsApp Replies & Campaigns for Your{" "}
-            <span className="text-red-600">
+            <span className="text-blue-400 font-mono">
               D2C Brand
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto px-4">
+          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto px-4 font-light">
             Save time by auto-replying to customer FAQs and sending bulk messages — no app, no setup.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <Button 
               size="lg" 
-              className="bg-red-600 hover:bg-red-700 text-white px-6 md:px-8 py-3 text-base md:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 text-base md:text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto border border-blue-500 font-mono"
               onClick={openGoogleForm}
             >
               Fill Form to Begin WhatsApp Demo
@@ -86,15 +86,15 @@ const Index = () => {
             </Button>
           </div>
           
-          <p className="text-xs md:text-sm text-gray-400 max-w-md mx-auto px-4 mb-4">
+          <p className="text-xs md:text-sm text-gray-500 max-w-md mx-auto px-4 mb-4 font-light">
             No automation setup needed. Just fill the form and experience the time-saving.
           </p>
 
           {/* Manual MVP Disclaimer - moved here */}
           <div className="mb-8">
-            <Card className="border-yellow-600 bg-yellow-900/20 max-w-3xl mx-auto">
+            <Card className="border-yellow-600/50 bg-yellow-900/10 max-w-3xl mx-auto backdrop-blur-sm">
               <CardContent className="p-4 md:p-6 text-center">
-                <p className="text-yellow-200 text-xs md:text-sm italic">
+                <p className="text-yellow-400 text-xs md:text-sm font-light">
                   ⚠️ This is a pilot version of Zorbase. 
                   All responses and campaigns are currently handled manually by our team to understand your needs better. 
                   Automation is coming soon.
@@ -108,19 +108,19 @@ const Index = () => {
       {/* Trust Signal Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 px-4">
+          <p className="text-base md:text-lg text-gray-400 mb-6 md:mb-8 px-4 font-light">
             Trusted by early users from Shopify and Instagram stores.
           </p>
           
-          <Card className="border-gray-700 shadow-lg bg-gray-800 max-w-2xl mx-auto">
+          <Card className="border-gray-800 shadow-lg bg-gray-900/50 max-w-2xl mx-auto backdrop-blur-sm">
             <CardContent className="p-6 md:p-8">
               <div className="flex items-start space-x-4">
-                <Quote className="h-6 w-6 md:h-8 md:w-8 text-red-600 flex-shrink-0 mt-1" />
+                <Quote className="h-6 w-6 md:h-8 md:w-8 text-blue-400 flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="text-lg md:text-xl text-white italic mb-4">
+                  <p className="text-lg md:text-xl text-white mb-4 font-light">
                     "Saved me 3+ hours every week!"
                   </p>
-                  <p className="text-sm md:text-base text-gray-400">
+                  <p className="text-sm md:text-base text-gray-500 font-mono">
                     — Handmade Store Owner
                   </p>
                 </div>
@@ -131,13 +131,13 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="container mx-auto px-4 py-16 md:py-20 bg-gray-800">
+      <section id="how-it-works" className="container mx-auto px-4 py-16 md:py-20 bg-gray-950/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 px-4 tracking-tight">
               How It Works
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto px-4 font-light">
               Experience the power of WhatsApp automation before you commit. 
               No setup required - just see the results.
             </p>
@@ -145,16 +145,16 @@ const Index = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {steps.map((step, index) => (
-              <Card key={index} className="border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group bg-gray-900">
+              <Card key={index} className="border-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group bg-gray-900/50 backdrop-blur-sm hover:border-blue-500/50">
                 <CardContent className="p-6 md:p-8 text-center relative z-10">
                   <div className={`inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full ${step.color} text-white mb-4 md:mb-6 shadow-lg`}>
                     <step.icon className="h-6 w-6 md:h-8 md:w-8" />
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-gray-500 mb-2">{step.number}</div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4">{step.title}</h3>
-                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">{step.description}</p>
+                  <div className="text-2xl md:text-3xl font-bold text-gray-600 mb-2 font-mono">{step.number}</div>
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4 tracking-wide">{step.title}</h3>
+                  <p className="text-sm md:text-base text-gray-400 leading-relaxed font-light">{step.description}</p>
                 </CardContent>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-red-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Card>
             ))}
           </div>
@@ -164,17 +164,17 @@ const Index = () => {
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 px-4 tracking-tight">
             Ready to Automate Your WhatsApp?
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 px-4">
+          <p className="text-lg md:text-xl text-gray-400 mb-8 px-4 font-light">
             This test is completely free. No commitment, no setup. 
             Just experience how automation could transform your business.
           </p>
           
           <Button 
             size="lg" 
-            className="bg-red-600 hover:bg-red-700 text-white px-8 md:px-12 py-4 text-lg md:text-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 mb-8 w-full sm:w-auto"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 md:px-12 py-4 text-lg md:text-xl font-medium shadow-xl hover:shadow-2xl transition-all duration-300 mb-8 w-full sm:w-auto border border-blue-500 font-mono"
             onClick={openGoogleForm}
           >
             Fill Form to Begin WhatsApp Demo
@@ -182,12 +182,12 @@ const Index = () => {
           </Button>
 
           {/* Privacy Notice */}
-          <Card className="border-gray-700 bg-gray-800 max-w-2xl mx-auto">
+          <Card className="border-gray-800 bg-gray-900/50 max-w-2xl mx-auto backdrop-blur-sm">
             <CardContent className="p-4 md:p-6">
-              <div className="text-xs md:text-sm text-gray-300 space-y-2">
+              <div className="text-xs md:text-sm text-gray-400 space-y-2 font-light">
                 <p className="flex items-center justify-center space-x-2">
                   <span>🔐</span>
-                  <span className="font-semibold">Privacy Notice</span>
+                  <span className="font-medium">Privacy Notice</span>
                 </p>
                 <p>Your WhatsApp number and FAQ responses will only be used for this test.</p>
                 <p>We will never spam or share your data.</p>
@@ -196,21 +196,21 @@ const Index = () => {
             </CardContent>
           </Card>
           
-          <p className="text-xs md:text-sm text-gray-400 mt-4 max-w-md mx-auto px-4">
+          <p className="text-xs md:text-sm text-gray-500 mt-4 max-w-md mx-auto px-4 font-light">
             Join small D2C brands who are already saving time with WhatsApp automation
           </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-950 text-white py-8 md:py-12">
+      <footer className="bg-black border-t border-gray-800 text-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2">
-              <Smartphone className="h-5 w-5 md:h-6 md:w-6 text-red-600" />
-              <span className="text-lg md:text-xl font-bold">Zorbase</span>
+              <Smartphone className="h-5 w-5 md:h-6 md:w-6 text-blue-400" />
+              <span className="text-lg md:text-xl font-bold tracking-wide">ZORBASE</span>
             </div>
-            <div className="text-xs md:text-sm text-gray-400 text-center">
+            <div className="text-xs md:text-sm text-gray-500 text-center font-mono">
               © 2025 Zorbase. Saving time for D2C businesses everywhere.
             </div>
           </div>
