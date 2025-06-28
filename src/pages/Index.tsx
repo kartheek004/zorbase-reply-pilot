@@ -20,81 +20,87 @@ const Index = () => {
       title: "Fill the Google Form",
       description: "Share your contact number + FAQs about your product",
       icon: FileText,
-      color: "bg-blue-500"
+      gradient: "from-purple-500 to-pink-500"
     },
     {
       number: "02", 
       title: "We Text You",
       description: "You'll receive WhatsApp messages based on what customers might ask",
       icon: MessageSquare,
-      color: "bg-blue-500"
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       number: "03",
       title: "Test the Auto-Replies", 
       description: "Ask your own FAQs — we'll respond manually, mimicking automation",
       icon: CheckCircle,
-      color: "bg-blue-500"
+      gradient: "from-green-500 to-emerald-500"
     },
     {
       number: "04",
       title: "View Your Message Log",
       description: "Get a simple Google Sheet log of all replies and interactions", 
       icon: Clock,
-      color: "bg-blue-500"
+      gradient: "from-orange-500 to-red-500"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white font-mono">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Header */}
-      <header className="container mx-auto px-4 py-6 border-b border-gray-800">
+      <header className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Smartphone className="h-6 w-6 md:h-8 md:w-8 text-blue-400" />
-            <span className="text-xl md:text-2xl font-bold text-white tracking-wide">ZORBASE</span>
+          <div className="flex items-center space-x-3">
+            <div className="p-2 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500">
+              <Smartphone className="h-6 w-6 md:h-7 md:w-7 text-white" />
+            </div>
+            <span className="text-2xl md:text-3xl font-bold text-white tracking-tight">ZORBASE</span>
           </div>
           
-          <div className="flex items-center space-x-2 text-white">
-            <Phone className="h-4 w-4 md:h-5 md:w-5 text-blue-400" />
-            <span className="text-sm md:text-base font-medium">9100910404</span>
+          <div className="flex items-center space-x-2 bg-gray-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700/50">
+            <div className="p-1.5 rounded-full bg-gradient-to-r from-green-400 to-green-500">
+              <Phone className="h-3 w-3 md:h-4 md:w-4 text-white" />
+            </div>
+            <span className="text-sm md:text-base font-medium text-gray-300">9100910404</span>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-12 md:py-20 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight px-2 tracking-tight">
-            Automate WhatsApp Replies & Campaigns for Your{" "}
-            <span className="text-blue-400 font-mono">
-              D2C Brand
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto px-4 font-light">
-            Save time by auto-replying to customer FAQs and sending bulk messages — no app, no setup.
-          </p>
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight px-2">
+              Automate WhatsApp Replies & Campaigns for Your{" "}
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+                D2C Brand
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto px-4 font-light leading-relaxed">
+              Save time by auto-replying to customer FAQs and sending bulk messages — no app, no setup.
+            </p>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <Button 
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 text-base md:text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto border border-blue-500 font-mono"
+              className="bg-gradient-to-r from-purple-600 via-purple-700 to-pink-600 hover:from-purple-700 hover:via-purple-800 hover:to-pink-700 text-white px-8 md:px-12 py-4 text-lg md:text-xl font-semibold shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 w-full sm:w-auto border-0 rounded-2xl transform hover:scale-105"
               onClick={openGoogleForm}
             >
               Fill Form to Begin WhatsApp Demo
-              <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+              <ArrowRight className="ml-3 h-5 w-5 md:h-6 md:w-6" />
             </Button>
           </div>
           
-          <p className="text-xs md:text-sm text-gray-500 max-w-md mx-auto px-4 mb-4 font-light">
+          <p className="text-sm md:text-base text-gray-500 max-w-lg mx-auto px-4 mb-6 font-light">
             No automation setup needed. Just fill the form and experience the time-saving.
           </p>
 
-          {/* Manual MVP Disclaimer - moved here */}
+          {/* Manual MVP Disclaimer */}
           <div className="mb-8">
-            <Card className="border-yellow-600/50 bg-yellow-900/10 max-w-3xl mx-auto backdrop-blur-sm">
-              <CardContent className="p-4 md:p-6 text-center">
-                <p className="text-yellow-400 text-xs md:text-sm font-light">
+            <Card className="border-0 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 max-w-4xl mx-auto backdrop-blur-xl rounded-3xl">
+              <CardContent className="p-6 md:p-8 text-center">
+                <p className="text-yellow-300 text-sm md:text-base font-medium leading-relaxed">
                   ⚠️ This is a pilot version of Zorbase. 
                   All responses and campaigns are currently handled manually by our team to understand your needs better. 
                   Automation is coming soon.
@@ -108,19 +114,21 @@ const Index = () => {
       {/* Trust Signal Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-base md:text-lg text-gray-400 mb-6 md:mb-8 px-4 font-light">
+          <p className="text-lg md:text-xl text-gray-400 mb-8 md:mb-10 px-4 font-light">
             Trusted by early users from Shopify and Instagram stores.
           </p>
           
-          <Card className="border-gray-800 shadow-lg bg-gray-900/50 max-w-2xl mx-auto backdrop-blur-sm">
-            <CardContent className="p-6 md:p-8">
-              <div className="flex items-start space-x-4">
-                <Quote className="h-6 w-6 md:h-8 md:w-8 text-blue-400 flex-shrink-0 mt-1" />
+          <Card className="border-0 bg-gradient-to-br from-gray-800/50 to-gray-900/50 max-w-3xl mx-auto backdrop-blur-xl rounded-3xl shadow-2xl">
+            <CardContent className="p-8 md:p-12">
+              <div className="flex items-start space-x-6">
+                <div className="p-3 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 flex-shrink-0">
+                  <Quote className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                </div>
                 <div className="text-left">
-                  <p className="text-lg md:text-xl text-white mb-4 font-light">
+                  <p className="text-xl md:text-2xl text-white mb-4 font-medium">
                     "Saved me 3+ hours every week!"
                   </p>
-                  <p className="text-sm md:text-base text-gray-500 font-mono">
+                  <p className="text-base md:text-lg text-gray-400">
                     — Handmade Store Owner
                   </p>
                 </div>
@@ -131,13 +139,13 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="container mx-auto px-4 py-16 md:py-20 bg-gray-950/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 px-4 tracking-tight">
+      <section id="how-it-works" className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 md:mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 px-4">
               How It Works
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto px-4 font-light">
+            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto px-4 font-light leading-relaxed">
               Experience the power of WhatsApp automation before you commit. 
               No setup required - just see the results.
             </p>
@@ -145,16 +153,19 @@ const Index = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {steps.map((step, index) => (
-              <Card key={index} className="border-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group bg-gray-900/50 backdrop-blur-sm hover:border-blue-500/50">
-                <CardContent className="p-6 md:p-8 text-center relative z-10">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full ${step.color} text-white mb-4 md:mb-6 shadow-lg`}>
-                    <step.icon className="h-6 w-6 md:h-8 md:w-8" />
+              <Card key={index} className="border-0 bg-gradient-to-br from-gray-800/30 to-gray-900/50 backdrop-blur-xl rounded-3xl shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 transform hover:scale-105 group">
+                <CardContent className="p-8 md:p-10 text-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-3xl" 
+                       style={{background: `linear-gradient(135deg, var(--tw-gradient-stops))`}}></div>
+                  
+                  <div className={`inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-gradient-to-r ${step.gradient} text-white mb-6 md:mb-8 shadow-2xl relative z-10`}>
+                    <step.icon className="h-8 w-8 md:h-10 md:w-10" />
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-gray-600 mb-2 font-mono">{step.number}</div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4 tracking-wide">{step.title}</h3>
-                  <p className="text-sm md:text-base text-gray-400 leading-relaxed font-light">{step.description}</p>
+                  
+                  <div className="text-3xl md:text-4xl font-bold text-gray-600 mb-4 relative z-10">{step.number}</div>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 relative z-10">{step.title}</h3>
+                  <p className="text-base md:text-lg text-gray-400 leading-relaxed font-light relative z-10">{step.description}</p>
                 </CardContent>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Card>
             ))}
           </div>
@@ -162,32 +173,32 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-16 md:py-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 px-4 tracking-tight">
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 px-4">
             Ready to Automate Your WhatsApp?
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 mb-8 px-4 font-light">
+          <p className="text-xl md:text-2xl text-gray-400 mb-12 px-4 font-light leading-relaxed">
             This test is completely free. No commitment, no setup. 
             Just experience how automation could transform your business.
           </p>
           
           <Button 
             size="lg" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 md:px-12 py-4 text-lg md:text-xl font-medium shadow-xl hover:shadow-2xl transition-all duration-300 mb-8 w-full sm:w-auto border border-blue-500 font-mono"
+            className="bg-gradient-to-r from-purple-600 via-purple-700 to-pink-600 hover:from-purple-700 hover:via-purple-800 hover:to-pink-700 text-white px-12 md:px-16 py-5 text-xl md:text-2xl font-semibold shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 mb-12 w-full sm:w-auto border-0 rounded-2xl transform hover:scale-105"
             onClick={openGoogleForm}
           >
             Fill Form to Begin WhatsApp Demo
-            <ArrowRight className="ml-3 h-5 w-5 md:h-6 md:w-6" />
+            <ArrowRight className="ml-4 h-6 w-6 md:h-7 md:w-7" />
           </Button>
 
           {/* Privacy Notice */}
-          <Card className="border-gray-800 bg-gray-900/50 max-w-2xl mx-auto backdrop-blur-sm">
-            <CardContent className="p-4 md:p-6">
-              <div className="text-xs md:text-sm text-gray-400 space-y-2 font-light">
-                <p className="flex items-center justify-center space-x-2">
-                  <span>🔐</span>
-                  <span className="font-medium">Privacy Notice</span>
+          <Card className="border-0 bg-gradient-to-br from-gray-800/30 to-gray-900/50 max-w-3xl mx-auto backdrop-blur-xl rounded-3xl">
+            <CardContent className="p-6 md:p-8">
+              <div className="text-sm md:text-base text-gray-400 space-y-3 font-light leading-relaxed">
+                <p className="flex items-center justify-center space-x-3">
+                  <span className="text-xl">🔐</span>
+                  <span className="font-semibold text-gray-300">Privacy Notice</span>
                 </p>
                 <p>Your WhatsApp number and FAQ responses will only be used for this test.</p>
                 <p>We will never spam or share your data.</p>
@@ -196,21 +207,23 @@ const Index = () => {
             </CardContent>
           </Card>
           
-          <p className="text-xs md:text-sm text-gray-500 mt-4 max-w-md mx-auto px-4 font-light">
+          <p className="text-sm md:text-base text-gray-500 mt-6 max-w-lg mx-auto px-4 font-light">
             Join small D2C brands who are already saving time with WhatsApp automation
           </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-gray-800 text-white py-8 md:py-12">
+      <footer className="bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-xl border-t border-gray-800/50 text-white py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2">
-              <Smartphone className="h-5 w-5 md:h-6 md:w-6 text-blue-400" />
-              <span className="text-lg md:text-xl font-bold tracking-wide">ZORBASE</span>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div className="flex items-center space-x-3">
+              <div className="p-2 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500">
+                <Smartphone className="h-6 w-6 md:h-7 md:w-7 text-white" />
+              </div>
+              <span className="text-xl md:text-2xl font-bold">ZORBASE</span>
             </div>
-            <div className="text-xs md:text-sm text-gray-500 text-center font-mono">
+            <div className="text-sm md:text-base text-gray-400 text-center">
               © 2025 Zorbase. Saving time for D2C businesses everywhere.
             </div>
           </div>
